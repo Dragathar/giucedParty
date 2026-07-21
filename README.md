@@ -19,13 +19,13 @@ Teleparty-Klon mit giuced-Branding. Unterstützt YouTube, Netflix, Disney+, HBO 
 1. Öffne `chrome://extensions/`
 2. Aktiviere **Developer mode** (oben rechts)
 3. Klicke **Load unpacked**
-4. Wähle den Ordner `/home/kali/giucedparty/`
+4. Wähle den Ordner `~/giucedparty/`
 5. Die giucedParty-Erweiterung erscheint in der Toolbar
 
 ### Relay-Server starten (lokal)
 
 ```bash
-cd /home/kali/giucedparty/server
+cd ~/giucedparty/server
 npm install
 npm start
 # Server läuft auf ws://localhost:8080
@@ -37,7 +37,7 @@ Dann in der giucedParty-Erweiterung:
 ### Relay-Server deployen (Produktion)
 
 ```bash
-cd /home/kali/giucedparty/server
+cd ~/giucedparty/server
 # Fly.io
 fly launch --image node:20
 fly deploy
