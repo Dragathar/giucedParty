@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>giucedParty Sidebar</title>
+  <link rel="stylesheet" href="sidebar.css">
+</head>
+<body>
+  <div class="sidebar-header">
+    <h2>🎉 giucedParty</h2>
+    <button id="close-btn" title="Close">✕</button>
+  </div>
+
+  <div class="participants-bar">
+    <div class="participants-label">Participants</div>
+    <div id="participants-list" class="participants-list"></div>
+  </div>
+
+  <div id="chat-messages" class="chat-messages">
+    <div class="system-msg">Connected to party. Say hi! 👋</div>
+  </div>
+
+  <div class="chat-input-bar">
+    <input type="text" id="chat-input" placeholder="Type a message..." maxlength="500" />
+    <button id="send-btn">➤</button>
+  </div>
+
+  <script src="sidebar.js"></script>
+</body>
+</html>

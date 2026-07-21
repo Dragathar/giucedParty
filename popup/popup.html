@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>giucedParty</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="header">
+    <h1>🎉 giucedParty</h1>
+    <p class="subtitle">Watch together with friends</p>
+  </div>
+
+  <div id="party-section" class="section">
+    <div id="no-party">
+      <div class="input-group">
+        <label for="username-input">Your Name</label>
+        <input type="text" id="username-input" placeholder="Enter your name" maxlength="20" />
+      </div>
+
+      <div class="button-group">
+        <button id="create-btn" class="btn btn-primary">🎟️ Start Party</button>
+      </div>
+
+      <div class="divider"><span>or</span></div>
+
+      <div class="input-group">
+        <label for="party-id-input">Party Code</label>
+        <input type="text" id="party-id-input" placeholder="party-xxxxxxxx" />
+        <button id="join-btn" class="btn btn-secondary">🔗 Join Party</button>
+      </div>
+    </div>
+
+    <div id="in-party" style="display:none">
+      <div class="party-info">
+        <p class="party-label">Party Code:</p>
+        <div class="party-code-row">
+          <code id="party-code-display"></code>
+          <button id="copy-code-btn" class="btn btn-small" title="Copy">📋</button>
+        </div>
+        <p class="party-hint">Share this code with friends!</p>
+      </div>
+      <button id="leave-btn" class="btn btn-danger">👋 Leave Party</button>
+    </div>
+  </div>
+
+  <div class="section settings">
+    <details>
+      <summary>⚙️ Settings</summary>
+      <div class="input-group">
+        <label for="server-url-input">Server URL (advanced)</label>
+        <input type="text" id="server-url-input" placeholder="wss://giucedparty-server.fly.dev" />
+        <button id="set-server-btn" class="btn btn-small">Set</button>
+      </div>
+      <button id="local-server-btn" class="btn btn-small">Use Local Server (localhost:8080)</button>
+    </details>
+  </div>
+
+  <div id="status" class="status"></div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

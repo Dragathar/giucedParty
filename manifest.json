@@ -1,0 +1,79 @@
+{
+  "name": "giucedParty",
+  "version": "1.0.0",
+  "description": "Watch videos together with friends — synced playback + chat sidebar. Supports YouTube, Netflix, Disney+, HBO Max, Amazon Prime & more.",
+  "manifest_version": 3,
+  "permissions": ["activeTab", "tabs", "storage", "scripting"],
+  "host_permissions": [
+    "https://*.youtube.com/*",
+    "https://*.netflix.com/*",
+    "https://*.disneyplus.com/*",
+    "https://*.max.com/*",
+    "https://*.hbomax.com/*",
+    "https://*.primevideo.com/*",
+    "https://*.twitch.tv/*",
+    "https://*.vimeo.com/*",
+    "https://*.hulu.com/*",
+    "https://*.paramountplus.com/*",
+    "https://*.peacocktv.com/*"
+  ],
+  "background": {
+    "service_worker": "background/service-worker.js",
+    "type": "module"
+  },
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_title": "giucedParty",
+    "default_icon": {
+      "16": "assets/icons/icon16.png",
+      "48": "assets/icons/icon48.png",
+      "128": "assets/icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "assets/icons/icon16.png",
+    "48": "assets/icons/icon48.png",
+    "128": "assets/icons/icon128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*.youtube.com/*",
+        "https://*.netflix.com/*",
+        "https://*.disneyplus.com/*",
+        "https://*.max.com/*",
+        "https://*.hbomax.com/*",
+        "https://*.primevideo.com/*",
+        "https://*.twitch.tv/*",
+        "https://*.vimeo.com/*",
+        "https://*.hulu.com/*",
+        "https://*.paramountplus.com/*",
+        "https://*.peacocktv.com/*"
+      ],
+      "js": ["content/content.js"],
+      "css": ["content/content.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "matches": [
+        "https://*.youtube.com/*",
+        "https://*.netflix.com/*",
+        "https://*.disneyplus.com/*",
+        "https://*.max.com/*",
+        "https://*.hbomax.com/*",
+        "https://*.primevideo.com/*",
+        "https://*.twitch.tv/*",
+        "https://*.vimeo.com/*",
+        "https://*.hulu.com/*",
+        "https://*.paramountplus.com/*",
+        "https://*.peacocktv.com/*"
+      ],
+      "resources": ["sidebar/sidebar.html", "sidebar/sidebar.js", "sidebar/sidebar.css"]
+    }
+  ],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'; connect-src 'self' wss://giucedparty-server.fly.dev ws://localhost:8080"
+  }
+}

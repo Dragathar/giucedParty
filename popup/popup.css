@@ -1,0 +1,187 @@
+/* giucedParty Popup Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 320px;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  background: #1a1a2e;
+  color: #eee;
+}
+
+.header {
+  text-align: center;
+  padding: 20px 16px 12px;
+  background: linear-gradient(135deg, #16213e 0%, #0f3460 100%);
+}
+
+.header h1 {
+  font-size: 22px;
+  font-weight: 800;
+  color: #BB86FC;
+}
+
+.subtitle {
+  font-size: 12px;
+  color: #888;
+  margin-top: 4px;
+}
+
+.section {
+  padding: 16px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.input-group label {
+  font-size: 12px;
+  color: #aaa;
+  font-weight: 600;
+}
+
+input[type="text"] {
+  padding: 10px 12px;
+  border: 1px solid #333;
+  border-radius: 8px;
+  background: #111;
+  color: #eee;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+input[type="text"]:focus {
+  border-color: #BB86FC;
+}
+
+.btn {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s, transform 0.1s;
+}
+
+.btn:active {
+  transform: scale(0.97);
+}
+
+.btn-primary {
+  background: #BB86FC;
+  color: #1a1a2e;
+}
+
+.btn-secondary {
+  background: #2d4a6e;
+  color: #eee;
+}
+
+.btn-danger {
+  background: #ff4444;
+  color: #fff;
+}
+
+.btn-small {
+  padding: 6px 10px;
+  font-size: 12px;
+  background: #333;
+  color: #eee;
+}
+
+.button-group {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.divider {
+  text-align: center;
+  margin: 16px 0;
+  position: relative;
+  color: #666;
+  font-size: 12px;
+}
+
+.divider::before,
+.divider::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 40%;
+  height: 1px;
+  background: #333;
+}
+
+.divider::before { left: 0; }
+.divider::after { right: 0; }
+
+.party-info {
+  background: #0f3460;
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.party-label {
+  font-size: 12px;
+  color: #aaa;
+  margin-bottom: 6px;
+}
+
+.party-code-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+.party-code-row code {
+  font-size: 18px;
+  font-weight: 700;
+  color: #BB86FC;
+  background: rgba(187, 134, 252, 0.1);
+  padding: 8px 14px;
+  border-radius: 8px;
+  letter-spacing: 1px;
+}
+
+.party-hint {
+  font-size: 11px;
+  color: #666;
+}
+
+.settings {
+  border-top: 1px solid #222;
+  padding-top: 12px;
+}
+
+details summary {
+  cursor: pointer;
+  color: #888;
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+
+.status {
+  text-align: center;
+  font-size: 12px;
+  padding: 8px;
+  color: #4ECDC4;
+  min-height: 20px;
+}
+
+.status.error {
+  color: #ff4444;
+}

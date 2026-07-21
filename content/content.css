@@ -1,0 +1,9 @@
+/* giucedParty Content Styles */
+#giucedparty-sidebar {
+  box-shadow: -4px 0 20px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+#giucedparty-sidebar[style*="display: none"] {
+  transform: translateX(100%);
+}
